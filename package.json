@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "@testing-library/jest-dom": "^5.16.1",
@@ -26,6 +27,7 @@
     "reselect": "^4.0.0",
     "simple-react-notifications": "^1.2.16",
     "styled-components": "^5.0.0",
+    "swiper": "^8.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
