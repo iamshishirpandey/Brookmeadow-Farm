@@ -72,8 +72,14 @@ const NavigationBar = ({ currentUser, hidden, clearCart }) => {
               <Nav.Link href="/" className="text-white font-semibold">
                 Home
               </Nav.Link>
+              <Nav.Link href="/about-us" className="text-white font-semibold">
+                About Us
+              </Nav.Link>
+              <Nav.Link href="/product" className="text-white font-semibold">
+                Product
+              </Nav.Link>
               <Nav.Link href="/contact" className="text-white font-semibold">
-                Contact
+                Contact Us
               </Nav.Link>
             </div>
             <div>

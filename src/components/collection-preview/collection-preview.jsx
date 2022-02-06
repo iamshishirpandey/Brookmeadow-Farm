@@ -10,7 +10,7 @@ import CollectionItem from "../collection-item/collection-item"
 
 const CollectionPreview = ({ title, items, match, history, routeName }) => {
   const ascendedItems = items.sort(
-    (a, b) => parseFloat(b.price) - parseFloat(a.price)
+    (a, b) => parseFloat(a.price) - parseFloat(b.price)
   )
   return (
     <CollectionPreviewContainerStyles className="mt-10">
