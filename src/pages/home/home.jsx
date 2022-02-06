@@ -65,7 +65,9 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <Shop />
+        <div className="mt-4">
+          <Shop />
+        </div>
       </div>
     </div>
   </section>

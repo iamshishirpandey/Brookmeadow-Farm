@@ -55,8 +55,8 @@ class App extends React.Component {
           <ErrorBoundary>
             <Suspense fallback={<Spinner />}>
               <Route exact path="/" component={Home} />
-              <Route path="/shop" component={Shop} />
-
+              <Route path="/product" component={Shop} />
+              <Route path="/about-us" component={Shop} />
               <Route path="/contact" component={Contact} />
               <Route
                 path="/signin"

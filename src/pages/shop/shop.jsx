@@ -28,7 +28,7 @@ class Shop extends React.Component {
     const { match, isCollectionFetching, isCollectionsLoaded } = this.props
 
     return (
-      <div className="flex mx-4 my-2 ">
+      <div className="flex mx-4 mb-8 ">
         <Route
           exact
           // path={`${match.path}`}
