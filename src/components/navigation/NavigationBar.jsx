@@ -13,7 +13,7 @@ const NavigationBar = ({ currentUser, hidden, clearCart }) => {
     <Navbar
       bg="light"
       expand="lg"
-      className="bg-white flex flex-col shadow sticky top-0 z-40 pl-0 pr-0 pb-0"
+      className="bg-white flex flex-col w-full shadow sticky top-0 z-40 pl-0 pr-0 pb-0"
     >
       <Container className="px-2">
         <Navbar.Brand href="/">
@@ -64,44 +64,57 @@ const NavigationBar = ({ currentUser, hidden, clearCart }) => {
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="" />
       </Container>
-
-      <div className="bg-orange-400 lg:pb-3 lg:pt-3 w-full px-12 flex justify-between">
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="w-full d-lg-flex justify-content-between">
-            <div className="lg:flex lg:space-x-4 text-sm lg:text-base">
-              <Nav.Link href="/" className="text-white font-semibold">
-                Home
-              </Nav.Link>
-              <Nav.Link href="/about-us" className="text-white font-semibold">
-                About Us
-              </Nav.Link>
-              <Nav.Link href="/product" className="text-white font-semibold">
-                Product
-              </Nav.Link>
-              <Nav.Link href="/contact" className="text-white font-semibold">
-                Contact Us
-              </Nav.Link>
-            </div>
-            <div>
-              <ul className="hidden lg:block lab-ul search-cart">
-                <li>
-                  <div className=" cart-option">
-                    <CartIcon />
+      <div className="bg-orange-400 w-full">
+        <Container>
+          <div className="bg-orange-400 lg:pb-3 lg:pt-3 w-full px-12 flex justify-between">
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="w-full d-lg-flex justify-content-between">
+                <div className="lg:flex lg:space-x-4 text-sm lg:text-base">
+                  <Nav.Link href="/" className="text-white font-semibold">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/about-us"
+                    className="text-white font-semibold"
+                  >
+                    About Us
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/product"
+                    className="text-white font-semibold"
+                  >
+                    Product
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/contact"
+                    className="text-white font-semibold"
+                  >
+                    Contact Us
+                  </Nav.Link>
+                </div>
+                <div>
+                  <ul className="hidden lg:block lab-ul search-cart">
+                    <li>
+                      <div className=" cart-option">
+                        <CartIcon />
+                      </div>
+                    </li>
+                  </ul>
+                  <div>
+                    <Nav.Link
+                      href="/checkout"
+                      className="text-white font-semibold lg:hidden text-sm lg:text-base"
+                    >
+                      Cart
+                    </Nav.Link>
                   </div>
-                </li>
-              </ul>
-              <div>
-                <Nav.Link
-                  href="/checkout"
-                  className="text-white font-semibold lg:hidden text-sm lg:text-base"
-                >
-                  Cart
-                </Nav.Link>
-              </div>
-            </div>
-          </Nav>
-        </Navbar.Collapse>
+                </div>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
+        </Container>
       </div>
+
       {hidden ? null : <CartDropdown />}
     </Navbar>
   )

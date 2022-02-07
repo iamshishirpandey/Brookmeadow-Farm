@@ -3,7 +3,7 @@ import React from "react"
 import { StyledFooter, FooterNameStyles } from "./footer.styles"
 
 const Footer = () => (
-  <footer>
+  <footer className="w-full">
     <div class="footer-top relative padding-tb bg-ash w-full">
       <div class="shape-images">
         <img src="assets/images/shape-img/01.png" alt="shape-images" />

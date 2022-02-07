@@ -25,13 +25,13 @@ const carouselData = [
     name: "goats",
     href: "/shop",
     imageSrc:
-      "https://media.istockphoto.com/photos/goats-picture-id146776721?b=1&k=20&m=146776721&s=170667a&w=0&h=_48OZ1XB9m8gveMoYQ3kheUMOcwm-7t3ezA42F1Ih70=",
+      "https://cdn.pixabay.com/photo/2018/05/02/09/36/animal-3368102_960_720.jpg",
   },
   {
     name: "hens",
     href: "/shop",
     imageSrc:
-      "https://images.unsplash.com/photo-1556316918-880f9e893822?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+      "https://cdn.pixabay.com/photo/2020/02/15/04/19/chicken-4849979_960_720.jpg",
   },
 ]
 

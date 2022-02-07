@@ -21,6 +21,7 @@ const SignIn = lazy(() => import("./components/sign-in/sign-in"))
 const SignUp = lazy(() => import("./components/sign-up/sign-up"))
 const Contact = lazy(() => import("./pages/contact/contact"))
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout"))
+const AboutUs = lazy(() => import("./pages/aboutus/aboutus"))
 
 class App extends React.Component {
   unsubscribeFromAuth = null
@@ -49,33 +50,37 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="flex-1 top-0">
-        <NavigationBar />
-        <Switch>
-          <ErrorBoundary>
-            <Suspense fallback={<Spinner />}>
-              <Route exact path="/" component={Home} />
-              <Route path="/product" component={Shop} />
-              <Route path="/about-us" component={Shop} />
-              <Route path="/contact" component={Contact} />
-              <Route
-                path="/signin"
-                render={() =>
-                  this.props.currentUser ? <Redirect to="/" /> : <SignIn />
-                }
-              />
-              <Route
-                path="/signup"
-                render={() =>
-                  this.props.currentUser ? <Redirect to="/" /> : <SignUp />
-                }
-              />
-              <Route exact path="/checkout" component={CheckoutPage} />
-            </Suspense>
-          </ErrorBoundary>
-        </Switch>
-        <Footer />
-        <GlobalStyle />
+      <div className="w-full justify-center items-center">
+        <div className="flex-1">
+          <NavigationBar />
+          <div className="flex justify-center">
+            <Switch>
+              <ErrorBoundary>
+                <Suspense fallback={<Spinner />}>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/product" component={Shop} />
+                  <Route path="/about-us" component={AboutUs} />
+                  <Route path="/contact" component={Contact} />
+                  <Route
+                    path="/signin"
+                    render={() =>
+                      this.props.currentUser ? <Redirect to="/" /> : <SignIn />
+                    }
+                  />
+                  <Route
+                    path="/signup"
+                    render={() =>
+                      this.props.currentUser ? <Redirect to="/" /> : <SignUp />
+                    }
+                  />
+                  <Route exact path="/checkout" component={CheckoutPage} />
+                </Suspense>
+              </ErrorBoundary>
+            </Switch>
+          </div>
+          <Footer />
+          <GlobalStyle />
+        </div>
       </div>
     )
   }
