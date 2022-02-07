@@ -76,11 +76,11 @@ const Home = () => {
             swiper.params.navigation.nextEl = navigationNextRef.current
           }}
           modules={[EffectFade, Autoplay, Pagination, Navigation]}
-          className="mySwiper h-[70vh]"
+          className="mySwiper h-[70vh] max-w-[1440px]"
         >
           {carouselData.map((data) => (
             <SwiperSlide key={data.name}>
-              <div className="h-full w-full">
+              <div className="h-full w-full ">
                 <img
                   src={data.imageSrc}
                   alt={data.name}

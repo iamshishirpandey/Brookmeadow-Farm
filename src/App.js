@@ -53,7 +53,7 @@ class App extends React.Component {
       <div className="w-full justify-center items-center">
         <div className="flex-1">
           <NavigationBar />
-          <div className="flex justify-center">
+          <div className="">
             <Switch>
               <ErrorBoundary>
                 <Suspense fallback={<Spinner />}>

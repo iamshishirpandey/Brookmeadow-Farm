@@ -21,47 +21,51 @@ const ourService = [
 ]
 const AboutUs = () => {
   return (
-    <div className="min-h-[60vh] max-w-[1440px]  flex flex-col items-center sm:px-16 sm:py-10 space-y-8">
-      <div className="mt-4 sm:mt-0 grid sm:grid-cols-2 lg:gap-20 items-center">
-        <div className="m-2 sm:m-0 sm:shadow rounded p-4 h-fit  bg-gray-100">
+    <div className="flex justify-center">
+      <div className="min-h-[60vh] max-w-[1440px]  flex flex-col items-center sm:px-16 sm:py-10 space-y-8">
+        <div className="mt-4 sm:mt-0 grid sm:grid-cols-2 lg:gap-20 items-center">
+          <div className="m-2 sm:m-0 sm:shadow rounded p-4 h-fit  bg-gray-100">
+            <h1 className="text-4xl font-semibold text-orange-400 underline">
+              Who we are{" "}
+            </h1>
+            <p className="text-gray-500 font-semibold mt-2">
+              We are a Fresh Farm online store company. We provide flesh meats
+              of different animals like hens, goat, lamb, pig, etc.
+            </p>
+            <p className="text-gray-500 font-semibold mt-2">
+              We provide fresh meats and deliver the order in time.
+            </p>
+          </div>
+          <div className="m-2 sm:m-0 sm:shadow rounded p-2 h-fit bg-white w-full grid grid-cols-2 gap-2">
+            {images.map((image) => (
+              <img src={image} alt="" className="h-40 w-full" />
+            ))}
+          </div>
+        </div>
+
+        <div className="sm:shadow rounded p-4 h-fit w-full  bg-gray-100">
           <h1 className="text-4xl font-semibold text-orange-400 underline">
-            Who we are{" "}
+            Our services
           </h1>
-          <p className="text-gray-500 font-semibold mt-2">
-            We are a Fresh Farm online store company. We provide flesh meats of
-            different animals like hens, goat, lamb, pig, etc.
-          </p>
-          <p className="text-gray-500 font-semibold mt-2">
-            We provide fresh meats and deliver the order in time.
-          </p>
-        </div>
-        <div className="m-2 sm:m-0 sm:shadow rounded p-2 h-fit bg-white w-full grid grid-cols-2 gap-2">
-          {images.map((image) => (
-            <img src={image} alt="" className="h-40 w-full" />
-          ))}
-        </div>
-      </div>
 
-      <div className="sm:shadow rounded p-4 h-fit w-full  bg-gray-100">
-        <h1 className="text-4xl font-semibold text-orange-400 underline">
-          Our services
-        </h1>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 mt-4 gap-4 ">
-          {ourService.map((data) => (
-            <div className="bg-white rounded ">
-              <img src={data.src} alt="" className="rounded-t w-full h-40" />
-              <div className="flex flex-col p-2">
-                <span className="text-gray-800 text-xl capitalize font-semibold">
-                  {data.title}
-                </span>
-                <span className="text-gray-400 font-semibold">
-                  <strong className="text-gray-600 capitalize">charge -</strong>{" "}
-                  {data.charge}
-                </span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 mt-4 gap-4 ">
+            {ourService.map((data) => (
+              <div className="bg-white rounded ">
+                <img src={data.src} alt="" className="rounded-t w-full h-40" />
+                <div className="flex flex-col p-2">
+                  <span className="text-gray-800 text-xl capitalize font-semibold">
+                    {data.title}
+                  </span>
+                  <span className="text-gray-400 font-semibold">
+                    <strong className="text-gray-600 capitalize">
+                      charge -
+                    </strong>{" "}
+                    {data.charge}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
