@@ -28,18 +28,19 @@ class Shop extends React.Component {
     const { match, isCollectionFetching, isCollectionsLoaded } = this.props
 
     return (
-      <div className="flex mx-4 mb-8 ">
-        <Route
-          exact
-          // path={`${match.path}`}
-          render={(props) => (
-            <CollectionsOverviewWithSpinner
-              isLoading={isCollectionFetching}
-              {...props}
-            />
-          )}
-        />
-        {/* <Route
+      <div className="flex justify-center">
+        <div className="flex mx-4 mb-8 max-w-[1440px] ">
+          <Route
+            exact
+            // path={`${match.path}`}
+            render={(props) => (
+              <CollectionsOverviewWithSpinner
+                isLoading={isCollectionFetching}
+                {...props}
+              />
+            )}
+          />
+          {/* <Route
           path={`${match.path}/:collectionId`}
           render={(props) => (
             <CollectionWithSpinner
@@ -48,6 +49,7 @@ class Shop extends React.Component {
             />
           )}
         /> */}
+        </div>
       </div>
     )
   }
